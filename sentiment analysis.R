@@ -1,10 +1,15 @@
-files=setwd("C:/Users/Krishnan/Desktop/textmining")
+#To set the working directory
+
+files=setwd("C:/Users/Krishnan/Desktop/sentiment analysis")
 filelist=list.files(path=files)
 
+#To treat each line as a character vector we use "Lapply"
 lapply(filelist,FUN=readLines)
 
+#write a function to read the lines in the files
 a=lapply(filelist,FUN=readLines)
 
+#write a function to convert element by element in a list to one big element
 lapply(a,FUN=paste,collapse=" ")
 
 corpus=lapply(a,FUN = paste,collapse=" ")
